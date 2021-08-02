@@ -27,7 +27,7 @@ export const addSection = (data) => async (dispatch) => {
   };
   try {
     const res = await axios.post(
-      "http://localhost:5000/api/sections",
+      "http://18.118.103.130:5000/api/sections",
       data,
       config
     );
@@ -38,7 +38,7 @@ export const addSection = (data) => async (dispatch) => {
 };
 export const getSections = () => async (dispatch) => {
   try {
-    const res = await axios.get("http://localhost:5000/api/sections");
+    const res = await axios.get("http://18.118.103.130:5000/api/sections");
     dispatch({ type: GET_SECTIONS, payload: res.data });
   } catch (err) {
     console.error(err.message);
@@ -67,7 +67,7 @@ export const addSubSection = (data) => async (dispatch) => {
   };
   try {
     const res = await axios.post(
-      "http://localhost:5000/api/subSections",
+      "http://18.118.103.130:5000/api/subSections",
       data,
       config
     );
@@ -84,7 +84,7 @@ export const addMemo = (data) => async (dispatch) => {
   };
   try {
     const res = await axios.post(
-      "http://localhost:5000/api/memos",
+      "http://18.118.103.130:5000/api/memos",
       data,
       config
     );
@@ -98,7 +98,7 @@ export const getSubSections = (id) => async (dispatch) => {
     id: id,
   };
   try {
-    const res = await axios.get("http://localhost:5000/api/subSections", {
+    const res = await axios.get("http://18.118.103.130:5000/api/subSections", {
       params,
     });
     dispatch({ type: GET_SUBSECTIONS, payload: res.data });
@@ -111,7 +111,7 @@ export const getMemos = (id) => async (dispatch) => {
     id,
   };
   try {
-    const res = await axios.get("http://localhost:5000/api/memos", {
+    const res = await axios.get("http://18.118.103.130:5000/api/memos", {
       params,
     });
     dispatch({ type: GET_MEMOS, payload: res.data });
@@ -129,7 +129,7 @@ export const clearSectionErrors = () => async (dispatch) => {
 };
 export const deleteSection = (id) => async (dispatch) => {
   try {
-    await axios.delete(`http://localhost:5000/api/sections/${id}`);
+    await axios.delete(`http://18.118.103.130:5000/api/sections/${id}`);
     dispatch({ type: DELETE_SECTION_SUCCESS, payload: id });
   } catch (err) {
     console.error(err.message);
@@ -137,13 +137,13 @@ export const deleteSection = (id) => async (dispatch) => {
 };
 export const deleteSubSection = (id) => async (dispatch) => {
   try {
-    await axios.delete(`http://localhost:5000/api/subSections/${id}`);
+    await axios.delete(`http://18.118.103.130:5000/api/subSections/${id}`);
     dispatch({ type: DELETE_SUBSECTION, payload: id });
   } catch (err) {}
 };
 export const deleteMemo = (id) => async (dispatch) => {
   try {
-    await axios.delete(`http://localhost:5000/api/memos/${id}`);
+    await axios.delete(`http://18.118.103.1305000/api/memos/${id}`);
     dispatch({ type: DELETE_MEMO, payload: id });
     console.log("deleted");
   } catch (err) {

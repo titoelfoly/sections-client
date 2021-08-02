@@ -10,6 +10,9 @@ const styles = makeStyles({
     position: "relative",
     height: "30rem",
     width: "20rem",
+    "@media screen and (max-width: 992px)": {
+      width: "10rem",
+    },
   },
   title: {
     textAlign: "center",
@@ -30,6 +33,9 @@ const styles = makeStyles({
     width: "20rem",
     margin: "auto",
     marginTop: "5rem",
+    "@media screen and (max-width: 992px)": {
+      width: "10rem",
+    },
   },
   fieldRow: {
     display: "flex",

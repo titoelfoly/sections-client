@@ -23,6 +23,10 @@ const styles = makeStyles({
     margin: "auto",
     marginBottom: "7rem",
     flexDirection: "column",
+    "@media screen and (max-width: 992px)": {
+      width: "20rem",
+      marginBottom: "4rem",
+    },
   },
   dataHolder: {
     display: "flex",
@@ -115,6 +119,9 @@ const styles = makeStyles({
     marginBottom: "7rem",
     flexDirection: "column",
     top: "-85vh",
+    "@media screen and (max-width: 992px)": {
+      width: "20rem",
+    },
   },
   formDiv: {
     display: "flex",

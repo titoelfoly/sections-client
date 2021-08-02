@@ -14,7 +14,7 @@ export const loadUser = () => async (dispatch) => {
     SetAuthToken(localStorage.token);
   }
   try {
-    const res = await axios.get("http://localhost:5000/api/auth");
+    const res = await axios.get("http://18.118.103.130:5000/api/auth");
     dispatch({ type: USER_LOADED, payload: res.data });
     console.log("user loaded");
   } catch (err) {
@@ -22,6 +22,7 @@ export const loadUser = () => async (dispatch) => {
   }
 };
 export const logout = () => async (dispatch) => {
+    SetAuthToken(null)
   dispatch({ type: LOGOUT });
 };
 
@@ -33,7 +34,7 @@ export const userLogin = (formData) => async (dispatch) => {
   };
   try {
     const res = await axios.post(
-      "http://localhost:5000/api/auth",
+      "http://18.118.103.130:5000/api/auth",
       formData,
       config
     );
@@ -50,7 +51,7 @@ export const register = (formData) => async (dispatch) => {
   };
   try {
     const res = await axios.post(
-      "http://localhost:5000/api/users",
+      "http://18.118.103.130:5000/api/users",
       formData,
       config
     );
